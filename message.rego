@@ -4,5 +4,9 @@ import input.attributes.request.http as http_request
 
 allow {
     http_request.method == "GET"
-    input.parsed_path == ["message"]
+
+    some id
+    input.parsed_path = ["messages", id]
+
+    data.custom_info[id].flag == true
 }
