@@ -8,5 +8,9 @@ allow {
     some id
     input.parsed_path = ["messages", id]
 
+    print("id = ", id)
+    print("data.custom_info = ", data.custom_info)
+    print("data.custom_info[id] = ", data.custom_info[id])
+
     data.custom_info[id].flag == true
 }
