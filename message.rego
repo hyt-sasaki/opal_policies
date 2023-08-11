@@ -12,5 +12,6 @@ allow {
     print("data.custom_info = ", data.custom_info)
     print("data.custom_info[id] = ", data.custom_info[id])
 
-    data.custom_info[id].flag == true
+    data.custom_info[_].id == id
+    data.custom_info[_].flag == true
 }
