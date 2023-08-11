@@ -11,6 +11,7 @@ allow {
     print("id = ", id)
     print("data.custom_info = ", data.custom_info)
 
-    data.custom_info[_].id == id
-    data.custom_info[_].flag == true
+    some idx
+    data.custom_info[idx].id == id
+    data.custom_info[idx].flag == true
 }
