@@ -17,3 +17,10 @@ allow {
     data.custom_info[idx].id == id
     data.custom_info[idx].flag == true
 }
+
+allow {
+    http_request.method == "PUT"
+
+    some id
+    input.parsed_path = ["messages", id]
+}
